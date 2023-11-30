@@ -21,5 +21,6 @@ app.get('/cc1', (c) => c.redirect('https://baidu.com?from=cc1'))
 app.get('/cc2', (c) => c.redirect('https://baidu.com?from=cc2'))
 app.get('/cc3', (c) => c.redirect('https://baidu.com?from=cc3'))
 app.get('/365', (c) => c.redirect('https://www.jidu365.com?from=cc'))
+app.get('/zm', (c) => c.redirect('https://www.zanmeis.com'))
 
 serve(app)
