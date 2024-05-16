@@ -26,4 +26,10 @@ app.get('/dawei', (c) => c.redirect('https://navs.savefamily.net/?vips=10,15,11,
 app.get('/luke', (c) => c.redirect('https://navs.savefamily.net/?sponsor=Luke'))
 app.get('/mysg', (c) => c.redirect('http://napi.yageapp.com/api/t.php?k=6b42e8370481f752'))
 
+app.get('/pastorlu', async (c) => {
+  const response = await fetch("https://x-resources.vercel.app/resources/801");
+  const res = await response.json();
+  return c.redirect(res['data']['url']);
+})
+
 serve(app)
