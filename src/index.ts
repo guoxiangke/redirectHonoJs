@@ -29,7 +29,7 @@ app.get('/mysg', (c) => c.redirect('http://napi.yageapp.com/api/t.php?k=6b42e837
 app.get('/pastorlu', async (c) => {
   const response = await fetch("https://x-resources.vercel.app/resources/801");
   const res = await response.json();
-  return c.redirect(res['data']['url']);
+  return c.redirect('https://influx.simai.life/api?redirect='+res['data']['url']+'?metric=PastorLu%26keyword=nav%26type=video');
 })
 
 serve(app)
